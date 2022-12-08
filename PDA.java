@@ -29,28 +29,22 @@ public class PDA
                     shouldContinue = false;
                     System.out.println("Closing...");
                 } else if (age < LOWER_BOUND) {
-                    System.out.println(age + " is too young!");         
+                    System.out.println(age + " is too young!"); 
                 } else {
                     System.out.println("Your acceptable dating range is " + getYounger(age) + " to " + getOlder(age) + " years old.");
                 }
             } catch (InputMismatchException error) {
                 System.out.println("Please enter an integer!");
                 scanner.next();
-            } 
+            }
         }  
     }
     
     public int getYounger(int age) {
-        if (Math.ceil(0.5 * age + 7) < ADULT && age >= ADULT) {
-            return ADULT;
-        }
         return (int)Math.ceil(0.5 * age + 7);
     }
     
     public int getOlder(int age) {
-        if (2 * (age - 7) >= ADULT && age < ADULT) {
-            return ADULT - 1;
-        }
         return 2 * (age - 7);
     }
 
