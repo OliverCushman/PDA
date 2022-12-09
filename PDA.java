@@ -5,7 +5,6 @@ public class PDA
     private Scanner scanner = new Scanner(System.in);
     private int age;
     private int LOWER_BOUND = 14;
-    private int ADULT = 18;
     private boolean shouldContinue = true;
     
     /**
